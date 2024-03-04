@@ -1,0 +1,17 @@
+runtime: php55
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: glass.ico
+  upload: favicon\.ico
+  
+- url: /(.*.(jpg|css|html|js|ico|png))
+  static_files: \1
+  upload: (.*.(jpg|css|html|js|ico|png))
+  
+- url: /
+  static_files: index.html
+  upload: index.html
+  
